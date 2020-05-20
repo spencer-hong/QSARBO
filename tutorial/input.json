@@ -1,0 +1,122 @@
+{
+	"classification or regression?":
+	{
+"_description": "classification or regression?",
+
+"content":"classification"
+	},
+"test or train?":
+{
+
+	"_description":"would you like to train a new model, or test a model? Press 1 for train and 2 for test (combiQSAR required).",
+
+	"content": 1
+},
+"which_models?":
+{
+	"_description":"put 1 for just random forest, 2 for neural network, 3 for both. If 3 is the input, it will automatically test combinatorial QSAR.",
+
+	"content":3
+},
+"developer_mode?":
+{
+	"_description":"this is the mode where multiple runs will be recorded with times and accuracies. put 1 for yes, 0 for no.",
+
+	"content":0
+},
+"autoML?":
+{
+	"_description":"would you like to use an AutoML feature? put 1 for yes, put 0 for no.",
+
+	"content":1
+},
+"column_SMILES":
+{
+	"_description":"this is the name of the column that contains SMILES in the csv file.",
+
+	"content":"SMILES"
+},
+"column_activity":
+{
+	"_description":"this is the name of the column that contains activity of interest in the csv file.",
+
+	"content":"logki-class"
+},
+"folder_name":
+{
+	"_description":"this is the name location of the folder housing your dataset. Everything will stay in this folder.",
+
+	"content":"ruark-final-automl-class"
+},
+"dataset_name":
+{
+
+	"_description":"this is the name of the dataset, with the csv ending. ",
+
+	"content":"Ruark_OPData.csv"
+},
+"chemID":
+{
+	"_description":"this is the name of the column that will not be used in the actual model, but one that can be kept for future identification of the chemical (EXAMPLE: CAS #, chemical names, etc.). Please write NA if not desired",
+
+	"content": "NA"
+},
+"num_cores":
+{
+	"_description":"the number of cores available (cpu)",
+
+	"content":4
+},
+"elements_kept":
+{
+	"_description":"please list the atomic numbers that you would like to keep in the dataset. VERSION 0.1: halogens not yet functional.",
+
+	"content": [1,6,8,7,15,16,17, 35, 9]
+},
+"correlation_threshold":
+{
+	"_description":"a floating value that marks the thrshold value for removing highly correlated features. Adapted from https://chrisalbon.com/machine_learning/feature_selection/drop_highly_correlated_features/",
+
+	"content":0.95
+},
+"std_threshold":
+{
+	"_description":"a floating value that marks the threshold value for removing low standard deviated features. Ranges from 0 to 1.",
+
+	"content": 0.25
+},
+
+"valid_split":
+{
+	"_description":"a decimal value from 0 to 1 that marks the percentage of the WHOLE dataset to be treated as a validation dataset",
+
+	"content": 0.2
+
+},
+"cvfolds?":
+{
+	"_description":"how many folds of cross validation?",
+
+	"content": 5
+},
+
+"test_split":
+{
+	"_description":"a decimal value from 0 to 1 that marks the PERCENTAGE of the TRAINING dataset to be treated as a test dataset (internal validation)",
+
+	"content": 0.1
+},
+"saved_descriptors?":
+{
+	"_description": "If this is not the first time you've run the code, then the code saved the previous descriptors. There is no need to calculate descriptors again, so please choose True. If this is the first time running the code, please choose False. ",
+
+	"content": "False"
+},
+"saved_hyperparameters?":
+{
+	"_description":"NOTE: loading previous hyperparameters will save a SIGNIFICANT amount of time. Please choose True if you have already tuned the hyperparameters in a previous run. If not (this is your first time running), then choose False. This can only be True if descriptors were also saved.",
+
+	"content":"False"
+}
+
+}
